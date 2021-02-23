@@ -2,3 +2,5 @@ db
 *.db
 _site/
 TODO
+/cmake-build-debug/
+/.idea

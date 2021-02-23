@@ -602,7 +602,8 @@ PrepareResult prepare_insert(InputBuffer* input_buffer, Statement* statement) {
   statement->type = STATEMENT_INSERT;
 
   char* keyword = strtok(input_buffer->buffer, " ");
-  char* id_string = strtok(NULL, " ");
+  //null : default using pre saved pointer!!!
+  char* id_string = strtok(NULL/*point to buffer*/, " ");
   char* username = strtok(NULL, " ");
   char* email = strtok(NULL, " ");
 
